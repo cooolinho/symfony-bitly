@@ -45,6 +45,14 @@ composer require symfony/apache-pack
 ``
 unset COMPOSER
 ``
+
+#### 404 Not Found
+
+https://stackoverflow.com/questions/60537798/symfony-4-route-the-requested-url-was-not-found-on-this-server
+``
+composer require symfony/apache-pack
+``
+
 ## [Admin-Dashboard]
 
 ```
