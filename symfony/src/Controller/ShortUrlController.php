@@ -28,7 +28,7 @@ class ShortUrlController extends AbstractController
 
         $this->createNotFoundException();
 
-        return $this->render('redirect/index.html.twig', [
+        return $this->render('@frontend/short_url/index.html.twig', [
             'controller_name' => 'RedirectController',
         ]);
     }

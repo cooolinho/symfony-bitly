@@ -90,5 +90,3 @@ Passwort = db_root_password
 
 [Admin-Dashboard]: <http://localhost/admin>
 
-[Trainer-Dashboard]: <http://localhost/admin>
-

@@ -11,18 +11,20 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractDashboardController
 {
+    public const ROUTE_INDEX = 'admin_dashboard_index';
+
     /**
-     * @Route("/dashboard", name="dashboard_index")
+     * @Route("/admin", name="admin_dashboard_index")
      */
     public function index(): Response
     {
-        return parent::index();
+        return $this->render('@admin/dashboard/index.html.twig');
     }
 
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Html');
+            ->setTitle('Cooolinho - Bitly Dashboard');
     }
 
     public function configureMenuItems(): iterable

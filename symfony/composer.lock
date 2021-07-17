@@ -1,20 +1,20 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "3ffaed4dfdef9969831734a18c285859",
-    "packages": [
-        {
-            "name": "composer/package-versions-deprecated",
-            "version": "1.11.99.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/package-versions-deprecated.git",
-                "reference": "c6522afe5540d5fc46675043d3ed5a45a740b27c"
-            },
-            "dist": {
+  "_readme": [
+    "This file locks the dependencies of your project to a known state",
+    "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+    "This file is @generated automatically"
+  ],
+  "content-hash": "90d7d8c0452239b8a9173788caa6053a",
+  "packages": [
+    {
+      "name": "composer/package-versions-deprecated",
+      "version": "1.11.99.2",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/composer/package-versions-deprecated.git",
+        "reference": "c6522afe5540d5fc46675043d3ed5a45a740b27c"
+      },
+      "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/c6522afe5540d5fc46675043d3ed5a45a740b27c",
                 "reference": "c6522afe5540d5fc46675043d3ed5a45a740b27c",
@@ -70,26 +70,121 @@
                 },
                 {
                     "url": "https://github.com/composer",
-                    "type": "github"
+                  "type": "github"
                 },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
+              {
+                "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                "type": "tidelift"
+              }
             ],
-            "time": "2021-05-24T07:46:03+00:00"
-        },
-        {
-            "name": "doctrine/annotations",
-            "version": "1.13.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/annotations.git",
-                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
+      "time": "2021-05-24T07:46:03+00:00"
+    },
+    {
+      "name": "cooolinho/symfony-security-bundle",
+      "version": "5.3.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/cooolinho/symfony-security-bundle.git",
+        "reference": "60faf1ff696dbac34b8a9195341cd9f590e90b07"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/cooolinho/symfony-security-bundle/zipball/60faf1ff696dbac34b8a9195341cd9f590e90b07",
+        "reference": "60faf1ff696dbac34b8a9195341cd9f590e90b07",
+        "shasum": ""
+      },
+      "require": {
+        "cooolinho/symfony-ui-bundle": "^5.3",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "php": ">=7.4",
+        "sensio/framework-extra-bundle": "^6.1",
+        "symfony/flex": "^1.3.1",
+        "symfony/framework-bundle": "5.3.*",
+        "symfony/security-bundle": "5.3.*",
+        "symfony/translation": "5.3.*",
+        "symfony/twig-bundle": "^5.3",
+        "symfony/yaml": "5.3.*",
+        "symfonycasts/reset-password-bundle": "^1.1"
+      },
+      "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
+        "roave/security-advisories": "dev-master"
+      },
+      "type": "symfony-bundle",
+      "autoload": {
+        "psr-4": {
+          "Cooolinho\\Bundle\\SecurityBundle\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "description": "test reusable bundle",
+      "support": {
+        "issues": "https://github.com/cooolinho/symfony-security-bundle/issues",
+        "source": "https://github.com/cooolinho/symfony-security-bundle/tree/5.3.1"
+      },
+      "time": "2021-07-16T23:17:00+00:00"
+    },
+    {
+      "name": "cooolinho/symfony-ui-bundle",
+      "version": "5.3.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/cooolinho/symfony-ui-bundle.git",
+        "reference": "d415981e0a075aa0d34c4a3da36a6f10de84c7fc"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/cooolinho/symfony-ui-bundle/zipball/d415981e0a075aa0d34c4a3da36a6f10de84c7fc",
+        "reference": "d415981e0a075aa0d34c4a3da36a6f10de84c7fc",
+        "shasum": ""
+      },
+      "require": {
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "php": ">=7.4",
+        "sensio/framework-extra-bundle": "^6.1",
+        "symfony/flex": "^1.3.1",
+        "symfony/framework-bundle": "5.3.*",
+        "symfony/translation": "5.3.*",
+        "symfony/twig-bundle": "^5.3",
+        "symfony/webpack-encore-bundle": "^1.7",
+        "symfony/yaml": "5.3.*"
+      },
+      "require-dev": {
+        "roave/security-advisories": "dev-master"
+      },
+      "type": "symfony-bundle",
+      "autoload": {
+        "psr-4": {
+          "Cooolinho\\Bundle\\UiBundle\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "description": "test reusable bundle",
+      "support": {
+        "issues": "https://github.com/cooolinho/symfony-ui-bundle/issues",
+        "source": "https://github.com/cooolinho/symfony-ui-bundle/tree/5.3.1"
+      },
+      "time": "2021-07-16T23:26:41+00:00"
+    },
+    {
+      "name": "doctrine/annotations",
+      "version": "1.13.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/doctrine/annotations.git",
+        "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/doctrine/annotations/zipball/e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
                 "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
                 "shasum": ""
             },
@@ -400,26 +495,103 @@
                 },
                 {
                     "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
+                  "type": "patreon"
                 },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
-                    "type": "tidelift"
-                }
+              {
+                "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
+                "type": "tidelift"
+              }
             ],
-            "time": "2021-02-10T20:18:51+00:00"
+          "time": "2021-02-10T20:18:51+00:00"
+        },
+    {
+      "name": "doctrine/data-fixtures",
+      "version": "1.5.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/doctrine/data-fixtures.git",
+        "reference": "51d3d4880d28951fff42a635a2389f8c63baddc5"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/51d3d4880d28951fff42a635a2389f8c63baddc5",
+        "reference": "51d3d4880d28951fff42a635a2389f8c63baddc5",
+        "shasum": ""
+      },
+      "require": {
+        "doctrine/common": "^2.13|^3.0",
+        "doctrine/persistence": "^1.3.3|^2.0",
+        "php": "^7.2 || ^8.0"
+      },
+      "conflict": {
+        "doctrine/phpcr-odm": "<1.3.0"
+      },
+      "require-dev": {
+        "doctrine/coding-standard": "^8.2",
+        "doctrine/dbal": "^2.5.4",
+        "doctrine/mongodb-odm": "^1.3.0 || ^2.0.0",
+        "doctrine/orm": "^2.7.0",
+        "ext-sqlite3": "*",
+        "phpunit/phpunit": "^8.0"
+      },
+      "suggest": {
+        "alcaeus/mongo-php-adapter": "For using MongoDB ODM 1.3 with PHP 7 (deprecated)",
+        "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
+        "doctrine/orm": "For loading ORM fixtures",
+        "doctrine/phpcr-odm": "For loading PHPCR ODM fixtures"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "Doctrine\\Common\\DataFixtures\\": "lib/Doctrine/Common/DataFixtures"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Jonathan Wage",
+          "email": "jonwage@gmail.com"
+        }
+      ],
+      "description": "Data Fixtures for all Doctrine Object Managers",
+      "homepage": "http://www.doctrine-project.org",
+      "keywords": [
+        "database"
+      ],
+      "support": {
+        "issues": "https://github.com/doctrine/data-fixtures/issues",
+        "source": "https://github.com/doctrine/data-fixtures/tree/1.5.0"
+      },
+      "funding": [
+        {
+          "url": "https://www.doctrine-project.org/sponsorship.html",
+          "type": "custom"
         },
         {
-            "name": "doctrine/dbal",
-            "version": "2.13.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/dbal.git",
-                "reference": "8dd39d2ead4409ce652fd4f02621060f009ea5e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/8dd39d2ead4409ce652fd4f02621060f009ea5e4",
+          "url": "https://www.patreon.com/phpdoctrine",
+          "type": "patreon"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdata-fixtures",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2021-01-23T10:20:43+00:00"
+    },
+    {
+      "name": "doctrine/dbal",
+      "version": "2.13.2",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/doctrine/dbal.git",
+        "reference": "8dd39d2ead4409ce652fd4f02621060f009ea5e4"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/doctrine/dbal/zipball/8dd39d2ead4409ce652fd4f02621060f009ea5e4",
                 "reference": "8dd39d2ead4409ce652fd4f02621060f009ea5e4",
                 "shasum": ""
             },
@@ -663,26 +835,107 @@
                 },
                 {
                     "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
+                  "type": "patreon"
                 },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdoctrine-bundle",
-                    "type": "tidelift"
-                }
+              {
+                "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdoctrine-bundle",
+                "type": "tidelift"
+              }
             ],
-            "time": "2021-06-05T13:40:39+00:00"
+          "time": "2021-06-05T13:40:39+00:00"
+        },
+    {
+      "name": "doctrine/doctrine-fixtures-bundle",
+      "version": "3.4.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
+        "reference": "870189619a7770f468ffb0b80925302e065a3b34"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/870189619a7770f468ffb0b80925302e065a3b34",
+        "reference": "870189619a7770f468ffb0b80925302e065a3b34",
+        "shasum": ""
+      },
+      "require": {
+        "doctrine/data-fixtures": "^1.3",
+        "doctrine/doctrine-bundle": "^1.11|^2.0",
+        "doctrine/orm": "^2.6.0",
+        "doctrine/persistence": "^1.3.7|^2.0",
+        "php": "^7.1 || ^8.0",
+        "symfony/config": "^3.4|^4.3|^5.0",
+        "symfony/console": "^3.4|^4.3|^5.0",
+        "symfony/dependency-injection": "^3.4|^4.3|^5.0",
+        "symfony/doctrine-bridge": "^3.4|^4.1|^5.0",
+        "symfony/http-kernel": "^3.4|^4.3|^5.0"
+      },
+      "require-dev": {
+        "doctrine/coding-standard": "^6.0",
+        "phpunit/phpunit": "^7.4 || ^8.0 || ^9.2",
+        "symfony/phpunit-bridge": "^4.1|^5.0"
+      },
+      "type": "symfony-bundle",
+      "autoload": {
+        "psr-4": {
+          "Doctrine\\Bundle\\FixturesBundle\\": ""
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Fabien Potencier",
+          "email": "fabien@symfony.com"
         },
         {
-            "name": "doctrine/doctrine-migrations-bundle",
-            "version": "3.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
-                "reference": "91f0a5e2356029575f3038432cc188b12f9d5da5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/91f0a5e2356029575f3038432cc188b12f9d5da5",
+          "name": "Doctrine Project",
+          "homepage": "http://www.doctrine-project.org"
+        },
+        {
+          "name": "Symfony Community",
+          "homepage": "http://symfony.com/contributors"
+        }
+      ],
+      "description": "Symfony DoctrineFixturesBundle",
+      "homepage": "http://www.doctrine-project.org",
+      "keywords": [
+        "Fixture",
+        "persistence"
+      ],
+      "support": {
+        "issues": "https://github.com/doctrine/DoctrineFixturesBundle/issues",
+        "source": "https://github.com/doctrine/DoctrineFixturesBundle/tree/3.4.0"
+      },
+      "funding": [
+        {
+          "url": "https://www.doctrine-project.org/sponsorship.html",
+          "type": "custom"
+        },
+        {
+          "url": "https://www.patreon.com/phpdoctrine",
+          "type": "patreon"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdoctrine-fixtures-bundle",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2020-11-14T09:36:49+00:00"
+    },
+    {
+      "name": "doctrine/doctrine-migrations-bundle",
+      "version": "3.1.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
+        "reference": "91f0a5e2356029575f3038432cc188b12f9d5da5"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/91f0a5e2356029575f3038432cc188b12f9d5da5",
                 "reference": "91f0a5e2356029575f3038432cc188b12f9d5da5",
                 "shasum": ""
             },
@@ -7695,26 +7948,97 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
-                    "type": "github"
+                  "type": "github"
                 },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
+              {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+              }
             ],
-            "time": "2021-06-22T16:07:00+00:00"
+          "time": "2021-06-22T16:07:00+00:00"
+        },
+    {
+      "name": "symfony/webpack-encore-bundle",
+      "version": "v1.12.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/webpack-encore-bundle.git",
+        "reference": "9943a59f8551b7a8181e19a2b4efa60e5907c667"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/9943a59f8551b7a8181e19a2b4efa60e5907c667",
+        "reference": "9943a59f8551b7a8181e19a2b4efa60e5907c667",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.1.3",
+        "symfony/asset": "^4.4 || ^5.0",
+        "symfony/config": "^4.4 || ^5.0",
+        "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/http-kernel": "^4.4 || ^5.0",
+        "symfony/service-contracts": "^1.0 || ^2.0"
+      },
+      "require-dev": {
+        "symfony/framework-bundle": "^4.4 || ^5.0",
+        "symfony/phpunit-bridge": "^4.4 || ^5.0",
+        "symfony/twig-bundle": "^4.4 || ^5.0",
+        "symfony/web-link": "^4.4 || ^5.0"
+      },
+      "type": "symfony-bundle",
+      "extra": {
+        "thanks": {
+          "name": "symfony/webpack-encore",
+          "url": "https://github.com/symfony/webpack-encore"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Symfony\\WebpackEncoreBundle\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Symfony Community",
+          "homepage": "https://symfony.com/contributors"
+        }
+      ],
+      "description": "Integration with your Symfony app & Webpack Encore!",
+      "support": {
+        "issues": "https://github.com/symfony/webpack-encore-bundle/issues",
+        "source": "https://github.com/symfony/webpack-encore-bundle/tree/v1.12.0"
+      },
+      "funding": [
+        {
+          "url": "https://symfony.com/sponsor",
+          "type": "custom"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v5.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "485c83a2fb5893e2ff21bf4bfc7fdf48b4967229"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/485c83a2fb5893e2ff21bf4bfc7fdf48b4967229",
+          "url": "https://github.com/fabpot",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2021-06-18T19:13:11+00:00"
+    },
+    {
+      "name": "symfony/yaml",
+      "version": "v5.3.3",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/yaml.git",
+        "reference": "485c83a2fb5893e2ff21bf4bfc7fdf48b4967229"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/yaml/zipball/485c83a2fb5893e2ff21bf4bfc7fdf48b4967229",
                 "reference": "485c83a2fb5893e2ff21bf4bfc7fdf48b4967229",
                 "shasum": ""
             },
@@ -7770,26 +8094,77 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
-                    "type": "github"
+                  "type": "github"
                 },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
+              {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+              }
             ],
-            "time": "2021-06-24T08:13:00+00:00"
-        },
-        {
-            "name": "twig/extra-bundle",
-            "version": "v3.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twigphp/twig-extra-bundle.git",
-                "reference": "e12a8ee63387abb83fb7e4c897663bfb94ac22b6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/twig-extra-bundle/zipball/e12a8ee63387abb83fb7e4c897663bfb94ac22b6",
+      "time": "2021-06-24T08:13:00+00:00"
+    },
+    {
+      "name": "symfonycasts/reset-password-bundle",
+      "version": "v1.9.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/SymfonyCasts/reset-password-bundle.git",
+        "reference": "775e847613737f55cf06c6a7457f4bcf8ce258e5"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/SymfonyCasts/reset-password-bundle/zipball/775e847613737f55cf06c6a7457f4bcf8ce258e5",
+        "reference": "775e847613737f55cf06c6a7457f4bcf8ce258e5",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.2.5",
+        "symfony/config": "^4.4 | ^5.0",
+        "symfony/dependency-injection": "^4.4 | ^5.0",
+        "symfony/deprecation-contracts": "^2.2",
+        "symfony/http-kernel": "^4.4 | ^5.0"
+      },
+      "conflict": {
+        "doctrine/orm": "<2.7",
+        "symfony/framework-bundle": "<4.4",
+        "symfony/http-foundation": "<4.4"
+      },
+      "require-dev": {
+        "doctrine/doctrine-bundle": "^2.0.3",
+        "doctrine/orm": "^2.7",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "symfony/framework-bundle": "^4.4 | ^5.0",
+        "symfony/phpunit-bridge": "^5.0",
+        "vimeo/psalm": "^4.3"
+      },
+      "type": "symfony-bundle",
+      "autoload": {
+        "psr-4": {
+          "SymfonyCasts\\Bundle\\ResetPassword\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "description": "Symfony bundle that adds password reset functionality.",
+      "support": {
+        "issues": "https://github.com/SymfonyCasts/reset-password-bundle/issues",
+        "source": "https://github.com/SymfonyCasts/reset-password-bundle/tree/v1.9.1"
+      },
+      "time": "2021-07-12T18:59:28+00:00"
+    },
+    {
+      "name": "twig/extra-bundle",
+      "version": "v3.3.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/twigphp/twig-extra-bundle.git",
+        "reference": "e12a8ee63387abb83fb7e4c897663bfb94ac22b6"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/twigphp/twig-extra-bundle/zipball/e12a8ee63387abb83fb7e4c897663bfb94ac22b6",
                 "reference": "e12a8ee63387abb83fb7e4c897663bfb94ac22b6",
                 "shasum": ""
             },
@@ -10209,9 +10584,9 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.5",
-        "ext-ctype": "*",
-        "ext-iconv": "*"
+      "php": ">=7.4",
+      "ext-ctype": "*",
+      "ext-iconv": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"

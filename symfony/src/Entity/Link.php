@@ -20,38 +20,46 @@ class Link
     /**
      * @ORM\Column(type="text")
      */
-    private $url;
+    private ?string $url;
 
     /**
      * @ORM\Column(type="string", length=55)
      */
-    private $shortUrl;
+    private ?string $shortUrl;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $description;
+    private ?string $description;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $counter;
+    private int $counter;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $createdAt;
+    private \DateTime $createdAt;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $updatedAt;
+    private \DateTime $updatedAt;
 
-    public function __construct()
+    /**
+     * Link constructor.
+     * @param string|null $url
+     */
+    public function __construct(?string $url = null)
     {
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
         $this->counter = 0;
+
+        if ($url) {
+            $this->url = $url;
+        }
     }
 
     public function getId(): ?int
