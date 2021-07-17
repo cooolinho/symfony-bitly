@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\LinkRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -15,7 +17,7 @@ class Link
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private ?int $id;
 
     /**
      * @ORM\Column(type="text")
@@ -50,6 +52,11 @@ class Link
     private string $absoluteUrl;
 
     /**
+     * @ORM\OneToMany(targetEntity=LinkAccessLog::class, mappedBy="link", orphanRemoval=true)
+     */
+    private Collection $accessLogs;
+
+    /**
      * Link constructor.
      * @param string|null $url
      */
@@ -58,6 +65,8 @@ class Link
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
         $this->counter = 0;
+        $this->shortUrl = null;
+        $this->accessLogs = new ArrayCollection();
 
         if ($url) {
             $this->url = $url;
@@ -165,5 +174,34 @@ class Link
     public function setAbsoluteUrl(string $absoluteUrl): void
     {
         $this->absoluteUrl = $absoluteUrl;
+    }
+
+    /**
+     * @return Collection|LinkAccessLog[]
+     */
+    public function getAccessLogs(): Collection
+    {
+        return $this->accessLogs;
+    }
+
+    public function addAccessLog(LinkAccessLog $accessLog): self
+    {
+        if (!$this->accessLogs->contains($accessLog)) {
+            $this->accessLogs[] = $accessLog;
+            $accessLog->setLink($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAccessLog(LinkAccessLog $accessLog): self
+    {
+        if ($this->accessLogs->removeElement($accessLog)) {
+            if ($accessLog->getLink() === $this) {
+                $accessLog->setLink(null);
+            }
+        }
+
+        return $this;
     }
 }

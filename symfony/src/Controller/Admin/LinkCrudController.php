@@ -50,13 +50,19 @@ class LinkCrudController extends AbstractCrudController
         /** @var Link $link */
         $link = $context->getEntity()->getInstance();
 
-        $absoluteUrl = $router->generate('short_url_index', ['shortUrl' => $link->getShortUrl()], Router::ABSOLUTE_URL);
+        $absoluteUrl = $router->generate(
+            'short_url_index',
+            ['shortUrl' => $link->getShortUrl()],
+            Router::ABSOLUTE_URL
+        );
+
         $link->setAbsoluteUrl($absoluteUrl);
 
         return $this->render(
-            '@EasyAdmin/crud/detail.html.twig',
+            '@admin/pages/link/detail.twig',
             array_merge(parent::detail($context)->all(), [
                 'link' => $link,
+                'logs' => $link->getAccessLogs(),
             ])
         );
     }

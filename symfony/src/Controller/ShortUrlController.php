@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Link;
+use App\Helper\LinkAccessLogHelper;
 use App\Repository\LinkRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,7 +22,7 @@ class ShortUrlController extends AbstractController
         ]);
 
         if ($link instanceof Link) {
-            $this->updateLink($link);
+            $this->updateLink($link, $request);
 
             return $this->redirect($link->getUrl());
         }
@@ -33,12 +34,15 @@ class ShortUrlController extends AbstractController
         ]);
     }
 
-    private function updateLink(Link $link): void
+    private function updateLink(Link $link, Request $request): void
     {
         $link->increaseCounter();
+        $linkAccessLog = LinkAccessLogHelper::create($link, $request);
 
         $em = $this->container->get('doctrine')->getManager();
         $em->persist($link);
+        $em->persist($linkAccessLog);
+
         $em->flush();
     }
 }

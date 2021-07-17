@@ -1,0 +1,18 @@
+<table id="link-access-logs" class="table table-striped">
+    <thead>
+    <tr>
+        <th>User Agent</th>
+        <th>IP</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for log in logs %}
+        <tr>
+            <td>{{ log.httpUserAgent }}</td>
+            <td>{{ log.clientIp }}</td>
+            <td>{{ log.createdAt|date('H:i:s d.m.Y') }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
