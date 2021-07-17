@@ -24,7 +24,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Cooolinho - Bitly Dashboard');
+            ->setTitle('Bitly Dashboard');
     }
 
     public function configureMenuItems(): iterable

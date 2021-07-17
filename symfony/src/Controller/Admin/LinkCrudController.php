@@ -2,8 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use App\Controller\ShortUrlController;
 use App\Entity\Link;
-use App\Entity\Team;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -18,6 +18,7 @@ use Symfony\Component\Routing\Router;
 
 class LinkCrudController extends AbstractCrudController
 {
+
     public static function getEntityFqcn(): string
     {
         return Link::class;
@@ -29,10 +30,12 @@ class LinkCrudController extends AbstractCrudController
             TextareaField::new('url')->hideOnIndex(),
             TextField::new('shortUrl')->hideOnForm(),
             TextField::new('description'),
-            TextField::new('absoluteUrl')->onlyOnDetail(),
             IntegerField::new('counter')->hideOnForm(),
-            DateTimeField::new('createdAt')->hideOnForm(),
-            DateTimeField::new('updatedAt')->hideOnForm(),
+            DateTimeField::new('createdAt')
+                ->hideOnForm(),
+            DateTimeField::new('updatedAt')
+                ->hideOnForm()
+                ->hideOnIndex(),
         ];
     }
 
@@ -44,19 +47,9 @@ class LinkCrudController extends AbstractCrudController
 
     public function detail(AdminContext $context): Response
     {
-        /** @var Router $router */
-        $router = $this->container->get('router');
-
         /** @var Link $link */
         $link = $context->getEntity()->getInstance();
-
-        $absoluteUrl = $router->generate(
-            'short_url_index',
-            ['shortUrl' => $link->getShortUrl()],
-            Router::ABSOLUTE_URL
-        );
-
-        $link->setAbsoluteUrl($absoluteUrl);
+        $link->setAbsoluteUrl($this->generateAbsoluteUrl($link));
 
         return $this->render(
             '@admin/pages/link/detail.twig',
@@ -64,6 +57,15 @@ class LinkCrudController extends AbstractCrudController
                 'link' => $link,
                 'logs' => $link->getAccessLogs(),
             ])
+        );
+    }
+
+    private function generateAbsoluteUrl(Link $link): string
+    {
+        return $this->container->get('router')->generate(
+            ShortUrlController::ROUTE_SHORT_URL_INDEX,
+            ['shortUrl' => $link->getShortUrl()],
+            Router::ABSOLUTE_URL
         );
     }
 }
