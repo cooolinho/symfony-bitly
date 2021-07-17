@@ -12,6 +12,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ShortUrlController extends AbstractController
 {
+    public const ROUTE_SHORT_URL_INDEX = 'short_url_index';
+
     /**
      * @Route("/x/{shortUrl}", name="short_url_index")
      */
