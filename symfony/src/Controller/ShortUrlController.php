@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ShortUrlController extends AbstractController
 {
     /**
-     * @Route("/x/{shortUrl}", name="redirect")
+     * @Route("/x/{shortUrl}", name="short_url_index")
      */
     public function index(Request $request, LinkRepository $linkRepository): Response
     {

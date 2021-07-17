@@ -47,6 +47,8 @@ class Link
      */
     private \DateTime $updatedAt;
 
+    private string $absoluteUrl;
+
     /**
      * Link constructor.
      * @param string|null $url
@@ -147,5 +149,21 @@ class Link
         $this->updatedAt = $updatedAt;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAbsoluteUrl(): string
+    {
+        return $this->absoluteUrl;
+    }
+
+    /**
+     * @param string $absoluteUrl
+     */
+    public function setAbsoluteUrl(string $absoluteUrl): void
+    {
+        $this->absoluteUrl = $absoluteUrl;
     }
 }
