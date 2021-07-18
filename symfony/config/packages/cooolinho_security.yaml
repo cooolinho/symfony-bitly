@@ -1,0 +1,2 @@
+cooolinho_security:
+    route_after_login: admin_dashboard_index
