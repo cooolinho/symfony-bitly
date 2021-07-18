@@ -82,6 +82,8 @@ Passwort = db_root_password
 
 ### [Mailcatcher]
 
+    MAILER_DSN=smtp://172.23.0.5:1025
+
 [http://localhost]: <http://localhost>
 
 [Adminer]: <http://localhost:8080>
