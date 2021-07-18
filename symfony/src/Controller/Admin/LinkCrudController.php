@@ -30,6 +30,7 @@ class LinkCrudController extends AbstractCrudController
             TextareaField::new('url')->hideOnIndex(),
             TextField::new('shortUrl')->hideOnForm(),
             TextField::new('description'),
+            TextField::new('absoluteUrl')->onlyOnDetail(),
             IntegerField::new('counter')->hideOnForm(),
             DateTimeField::new('createdAt')
                 ->hideOnForm(),
