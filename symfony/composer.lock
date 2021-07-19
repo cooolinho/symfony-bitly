@@ -80,31 +80,31 @@
             "time": "2021-05-24T07:46:03+00:00"
         },
         {
-            "name": "cooolinho/symfony-security-bundle",
-            "version": "5.3.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cooolinho/symfony-security-bundle.git",
-                "reference": "5b5aa7768aca8336c24b110dd42cc167ba962d50"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cooolinho/symfony-security-bundle/zipball/5b5aa7768aca8336c24b110dd42cc167ba962d50",
-                "reference": "5b5aa7768aca8336c24b110dd42cc167ba962d50",
-                "shasum": ""
-            },
+          "name": "cooolinho/symfony-security-bundle",
+          "version": "5.3.6",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/cooolinho/symfony-security-bundle.git",
+            "reference": "e6647b2e44fcc2ae06ee3357ffeca951d4029396"
+          },
+          "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/cooolinho/symfony-security-bundle/zipball/e6647b2e44fcc2ae06ee3357ffeca951d4029396",
+            "reference": "e6647b2e44fcc2ae06ee3357ffeca951d4029396",
+            "shasum": ""
+          },
             "require": {
-                "cooolinho/symfony-ui-bundle": "5.3.2",
-                "ext-ctype": "*",
-                "ext-iconv": "*",
-                "php": ">=7.4",
-                "sensio/framework-extra-bundle": "^6.1",
-                "symfony/flex": "^1.3.1",
-                "symfony/framework-bundle": "5.3.*",
-                "symfony/security-bundle": "5.3.*",
-                "symfony/translation": "5.3.*",
-                "symfony/twig-bundle": "^5.3",
-                "symfony/yaml": "5.3.*",
+              "cooolinho/symfony-ui-bundle": "^5.3",
+              "ext-ctype": "*",
+              "ext-iconv": "*",
+              "php": ">=7.4",
+              "sensio/framework-extra-bundle": "^6.1",
+              "symfony/flex": "^1.3.1",
+              "symfony/framework-bundle": "5.3.*",
+              "symfony/security-bundle": "5.3.*",
+              "symfony/translation": "5.3.*",
+              "symfony/twig-bundle": "^5.3",
+              "symfony/yaml": "5.3.*",
                 "symfonycasts/reset-password-bundle": "^1.1"
             },
             "require-dev": {
@@ -124,9 +124,9 @@
             "description": "test reusable bundle",
             "support": {
                 "issues": "https://github.com/cooolinho/symfony-security-bundle/issues",
-                "source": "https://github.com/cooolinho/symfony-security-bundle/tree/5.3.5"
+              "source": "https://github.com/cooolinho/symfony-security-bundle/tree/5.3.6"
             },
-            "time": "2021-07-19T01:33:09+00:00"
+          "time": "2021-07-19T17:30:49+00:00"
         },
         {
             "name": "cooolinho/symfony-ui-bundle",
